@@ -1,0 +1,26 @@
+Trainers 
+-
+trainer_id INT PK
+first_name VARCHAR
+last_name VARCHAR
+gym_id INT fk >- gym.gym_id
+
+Members
+-
+member_id INT PK
+first_name VARCHAR
+last_name VARCHAR
+trainer_id INT fk >- trainers.trainer_id
+gym_id INT fk >- gym.gym_id
+payment_id INT fk - payments.payment_id
+
+Gym
+-
+gym_id INT PK
+gym_name VARCHAR
+cost_of_membership INT
+
+Payments
+-
+payment_id INT PK
+card_info INT
